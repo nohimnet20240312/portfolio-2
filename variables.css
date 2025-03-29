@@ -1,0 +1,35 @@
+:root {
+  /* CSS HEX */
+  --parchment:rgb(244, 233, 205) ;
+  --teal: #468189ff;
+  --cambridge-blue: #77aca2ff;
+  --ash-gray: #9dbebbff;
+  --rich-black:#031926ff ;
+}
+* {
+  font-family: "andada pro";
+  color: var(--parchment);
+}
+.default-button {
+  background-color: var(--cambridge-blue);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 6px 4px 0px var(--parchment);
+  text-align: center;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+}
+.default-button:hover {
+  background-color: var(--parchment);
+  box-shadow: 6px 4px 0px var(--cambridge-blue);
+  color: var(--rich-black);
+}
+.fa-brands{
+    margin-right: 10px;
+    font-size: 22px;
+}
+a,i{
+  color: inherit;
+}
