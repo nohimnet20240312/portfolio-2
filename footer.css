@@ -1,15 +1,27 @@
 footer{
     display: grid;
-    grid-template-columns: 1fr 0.4fr;
+    grid-template-columns: 1fr 0.8fr; 
     /* background-color: var(--); */
     height: 100px;
-    font-size: 27px;
-    border-top: 1px solid var(--cambridge-blue);
+    font-size: 17px;
+    border-top: 1px solid var(--bg-overlay);
     backdrop-filter: blur(20px);
+    /* display: flex;
+    justify-content: space-between; */
 }
 footer > *{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 30px;
+    justify-content: space-between;
+}
+footer > :nth-child(2){
+    /* background-color: aliceblue; */
+
+    justify-content: space-evenly;
+    
+}
+footer i{
+    cursor: pointer;
 }

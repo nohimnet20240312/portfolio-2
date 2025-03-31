@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nohim's portfolio</title>
+    <link rel="stylesheet" href="./adjustments.css">
     <link rel="stylesheet" href="./coding-snippet.css" />
     <link rel="stylesheet" href="./reponsive.css" />
     <link rel="stylesheet" href="./variables.css" />
@@ -17,29 +18,32 @@
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script async src="./script.js"></script>
   </head>
   <body>
     <div class="background-container"></div>
     <div class="container">
-      <header>
+      <header id="home">
         <nav class="navigation">
           <div class="navigation-section--1">Nohim</div>
           <div class="navigation-section--2">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </nav>
         <div class="hero">
+          <div class="animated-pointer hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 55.2L0 426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320l118.1 0c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z"/></svg>
+          </div>
+
           <div class="hero-section--1">
             <h1 class="hero-title">Hello I am Nohim!</h1>
             <p class="hero-sub-title">
@@ -74,13 +78,13 @@
         </div>
       </header>
       <main>
-        <section class="main-sections about">
+        <section class="main-sections about" id="about">
           <div class="main-sections-section--1">
             <div class="main-sections-section--1-row--1">
-              <div class="main-sections-intro-text">About</div>
+              <div class="main-sections-intro-text"><i class="fa-solid fa-circle-info"></i>About</div>
             </div>
           </div>
-          <div class="main-sections-section--2">
+          <div class="main-sections-section--2 about">
             <div class="main-sections-section--2-col--1">
               <div class="main-sections-section--2-col--1-row--1">
                 <p class="section-text">
@@ -98,29 +102,58 @@
                 </p>
               </div>
               <div class="main-sections-section--2-col--1-row--2">
-                <button class="about-cta default-button">
+                <div class="about-cta default-button">
                   <a href="">
                     <i class="fa-brands fa-linkedin"></i>Go to Linked in</a
-                  ></button
-                ><button class="about-cta default-button">
+                  ></div
+                ><div class="about-cta default-button">
                   <a href="">
                     <i class="fa-brands fa-github"></i>Go to Github</a
                   >
-                </button>
+                  </div>
               </div>
               <div class="main-sections-section--2-col--1-row--3"></div>
             </div>
-            <div class="main-sections-section--2-col--2">
+            <div class="main-sections-section--2-col--2 snippet">
               <!-- <div class="image"></div> -->
+              <div class="coding-snippet-container">
+                <div class="coding-snippet-container-row--1">
+                  <div
+                    class="coding-snippet-container-row--1-col coding-snippet-container-row--1-col--1"
+                  >
+                    <label for="index">&plus; index.html </label>
+                    <input type="radio" name="select-tab" id="index" checked />
+                  </div>
+                  <div
+                    class="coding-snippet-container-row--1-col coding-snippet-container-row--1-col--2"
+                  >
+                    <label for="css">&plus; style.css </label>
+                    <input type="radio" name="select-tab" id="css" />
+                  </div>
+                  <div
+                    class="coding-snippet-container-row--1-col coding-snippet-container-row--1-col--3"
+                  >
+                    <label for="script">&plus; script.js</label>
+                    <input type="radio" name="select-tab" id="script" />
+                  </div>
+                </div>
+                <div class="coding-snippet-container-row--2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur
+                  dolorum fugiat dolore nemo beatae deleniti dolores error atque similique?
+                  Pariatur atque nobis voluptates odio ipsum totam, dicta sit neque.
+                </div>
+              </div>
+              
+              
             </div>
           </div>
         </section>
 
-        <section class="main-sections projects">
+        <section class="main-sections projects " id="projects">
           <div class="main-sections-section--1">
-            <div class="main-sections-intro-text">Projects</div>
+            <div class="main-sections-intro-text"><i class="fa-solid fa-diagram-project"></i>Projects</div>
           </div>
-          <div class="main-sections-section--2 projects">
+          <div class="main-sections-section--2 exception">
             <div class="main-sections-section--2-col main-sections-section--2-col--1">
               <div class="section-text">i have recently participated in a group coursework project held by our university for my second semester, and with the collaboratyion of my team members i was a ble to successfully complete a complete web project with a excellent results. </div>
             </div>
@@ -131,11 +164,11 @@
               <div class="section-text">i have dome numerous javascript projects, which includes complex text manipulation DOM events and i am experienced in react which s a crucial framework that can bring stunning desin ideas into eality.</div><div>
           </div>
         </section>
-        <section class="main-sections projects skills">
+        <section class="main-sections projects skills" id="skills">
           <div class="main-sections-section--1">
-            <div class="main-sections-intro-text">skills</div>
+            <div class="main-sections-intro-text"><i class="fa-solid fa-code"></i>skills</div>
           </div>
-          <div class="main-sections-section--2 projects">
+          <div class="main-sections-section--2 exception ">
             <div class="main-sections-section--2-col main-sections-section--2-col--1">
               <div class="section-text">i have recently participated in a group coursework project held by our university for my second semester, and with the collaboratyion of my team members i was a ble to successfully complete a complete web project with a excellent results. </div>
             </div>
@@ -146,11 +179,11 @@
               <div class="section-text">i have done numerous javascript projects, which includes complex text manipulation DOM events and i am experienced in react which s a crucial framework that can bring stunning desin ideas into eality.</div><div>
           </div>
         </section>
-        <section class="main-sections projects education">
+        <section class="main-sections projects education" id="education">
           <div class="main-sections-section--1">
-            <div class="main-sections-intro-text">Education</div>
+            <div class="main-sections-intro-text"><i class="fa-solid fa-award"></i>Education</div>
           </div>
-          <div class="main-sections-section--2 projects">
+          <div class="main-sections-section--2 exception">
             <div class="main-sections-section--2-col main-sections-section--2-col--1">
              
               <div class="section-text section-text-edu">
@@ -177,10 +210,15 @@
         </div>
         <div class="footer-section footer-section--2">
           <div class="footer-section--2-icon--1">
-            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/nh7799">   <i class="fa-brands fa-github">
+             
+            </i></a>
+         
           </div>
           <div class="footer-section--2-icon--2">
-            <i class="fa-brands fa-linkedin"></i>
+           
+              <a href="https://www.linkedin.com/in/nohim-hasitha-7624b1332/"> <i class="fa-brands fa-linkedin"></a></i>
+            </i>
           </div>
           <div class="footer-section--2-icon--3">
             <i class="fa-brands fa-codepen"></i>

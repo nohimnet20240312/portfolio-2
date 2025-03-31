@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
-  background-color: var(--rich-black);
-  color: var(--parchment);
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
   cursor: default;
   position: relative;
   overflow: hidden;
@@ -17,26 +18,25 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./images/nnnoise.svg");
+  /* background-image: url("./images/nnnoise.svg"); */
   z-index: -122;
   filter: blur(5px);
   transition: all 0.3s ease-in-out;
-  animation: change 3s linear infinite;
+  /* animation: change 3s linear infinite; */
 }
 @keyframes change {
   from {
-    filter:blur(3px) brightness(100%)
-    
+    filter: blur(3px) brightness(100%);
   }
-  50%{
+  50% {
     filter: blur(5px) brightness(10%);
   }
   to {
-   filter: blur(3px) brightness(100%);
+    filter: blur(3px) brightness(100%);
   }
 }
-body > * :not(footer) {
-  padding: 0px 10px;
+body > *:not(footer) :not(header) {
+  /* padding: 0px 10px; */
 }
 body > *:not(:first-child) {
   /* padding: 20px; */
@@ -72,4 +72,13 @@ img.avatar {
 
 .container > * {
   /* background-color: aqua; */
+}
+.section > div{
+  /* padding: 10px !important; */
+}
+main{
+  padding: 0px 20px;
+}
+.hero{
+  padding: 0px 30px;
 }
