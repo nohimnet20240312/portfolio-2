@@ -46,6 +46,10 @@
   gap: 20px;
 }
 
+.main-sections-section--2.about {
+  gap: 20px;
+}
+
 @media (max-width: 800px) {
   header {
     height: fit-content;
@@ -89,11 +93,11 @@
     font-size: 14px;
   }
 
-  .main-sections-section--2.about{
-    grid-template-rows: repeat(2,1fr);
+  .main-sections-section--2.about {
+    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: 1fr;
   }
-  .main-sections-section--2.about >*{
+  .main-sections-section--2.about > * {
     width: fit-content;
   }
 }
@@ -137,6 +141,7 @@
 
 .about-cta:first-child {
   margin-right: 20px;
+  display: contents;
 }
 .main-sections-section--2.projects {
   display: grid;
@@ -163,11 +168,11 @@
 #westminster-img {
   background-image: url("./images/westminster.png") !important;
 }
-.about-cta{
+.about-cta {
   display: inline;
 }
-.about-cta a{
+.about-cta a {
   text-decoration: none;
-
 }
-section{}
+section {
+}
