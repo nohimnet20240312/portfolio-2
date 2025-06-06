@@ -56,6 +56,14 @@ nav ul li a {
   grid-template-rows: 1fr;
   overflow: hidden;
   position: relative;
+ /* background-image:
+    radial-gradient(circle at center,
+      rgba(37, 37, 37, 0.8) 0%,
+      rgba(43, 42, 42, 0.9) 60%,
+      rgba(0, 0, 0, 0.95) 100%
+    ),
+    url(./images/photo_2025-06-06_12-08-49.jpg);  background-size: cover;
+  background-repeat: no-repeat; */
 
   /* max-width: 1440px; */
 }

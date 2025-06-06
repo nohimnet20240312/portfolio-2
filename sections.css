@@ -159,7 +159,7 @@
 }
 #udemy-img,
 #westminster-img,
-#mcg-img {
+#mcg-img,.img-class {
   background-image: url("./images/udemy-new-20212512.jpg");
   width: 100%;
   background-size: cover;
@@ -174,6 +174,12 @@
     background-image: url("./images/OIP.jpg") !important;
     
 
+}
+#robot1-img{
+  background-image: url("./images/photo_2025-06-06_12-08-49.jpg");
+}
+#robot2-img{
+  background-image: url("./images/photo_2025-06-06_12-32-26.jpg");
 }
 .about-cta {
   display: inline;
