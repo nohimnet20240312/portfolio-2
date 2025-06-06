@@ -1,22 +1,22 @@
 
 let dark = true
 document.addEventListener('keypress', (e) => {
-    console.log(e.key);
-    let key = e.key
-    if (e.key == 'q') {
-        console.log('hello');
-        if (!dark) {
-            dark = true;
-            document.documentElement.style.setProperty('--parchment', "rgb(244, 233, 205)");
-            document.documentElement.style.setProperty('--cambridge-blue', "#77aca2ff");
+  console.log(e.key);
+  let key = e.key
+  if (e.key == 'q') {
+    console.log('hello');
+    if (!dark) {
+      dark = true;
+      document.documentElement.style.setProperty('--parchment', "rgb(244, 233, 205)");
+      document.documentElement.style.setProperty('--cambridge-blue', "#77aca2ff");
 
-        }
-        else {
-            dark = false
-            document.documentElement.style.setProperty('--parchment', "");
-            document.documentElement.style.setProperty('--cambridge-blue', "");
-        }
     }
+    else {
+      dark = false
+      document.documentElement.style.setProperty('--parchment', "");
+      document.documentElement.style.setProperty('--cambridge-blue', "");
+    }
+  }
 })
 
 'use strict';
@@ -30,33 +30,33 @@ const div = document.querySelector(".animated-pointer");
 
 const nav = document.querySelector('nav.navigation')
 document.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-      nav.classList.add('stick')
-      div.classList.add('hidden')
-    }
-    else {
-        nav.classList.remove('stick')
-    }
+  if (window.scrollY > 200) {
+    nav.classList.add('stick')
+    div.classList.add('hidden')
+  }
+  else {
+    nav.classList.remove('stick')
+  }
 })
 
 codingSnippetRadio.forEach(el => {
-    console.log(el.checked);
+  console.log(el.checked);
 })
 function setCodingSnippet(text) {
-    codingSnipperRow2.classList.add('visibility')
-    setTimeout(() => {
-        codingSnipperRow2.classList.remove('visibility')
-    }, 400);
-    codingSnipperRow2.textContent = `${text}`
+  codingSnipperRow2.classList.add('visibility')
+  setTimeout(() => {
+    codingSnipperRow2.classList.remove('visibility')
+  }, 400);
+  codingSnipperRow2.textContent = `${text}`
 }
 function manageSnippet() {
-    codingSnippetRadio.forEach(el => el.closest('.coding-snippet-container-row--1-col').classList.remove('bright'))
-    const clickedRadio = document.querySelector('input[name="select-tab"]:checked');
-    const closestDiv = clickedRadio.closest('.coding-snippet-container-row--1-col');
-    const clickedRadioId = clickedRadio.id;
+  codingSnippetRadio.forEach(el => el.closest('.coding-snippet-container-row--1-col').classList.remove('bright'))
+  const clickedRadio = document.querySelector('input[name="select-tab"]:checked');
+  const closestDiv = clickedRadio.closest('.coding-snippet-container-row--1-col');
+  const clickedRadioId = clickedRadio.id;
 
-    if (clickedRadioId == 'index') {
-        setCodingSnippet(`<!DOCTYPE html>
+  if (clickedRadioId == 'index') {
+    setCodingSnippet(`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -92,10 +92,10 @@ function manageSnippet() {
       <section id="about" class="tab">
         <div class="about-c
 `
-        )
-    }
-    else if (clickedRadioId == 'css') {
-        setCodingSnippet(`coding-snippet-container {
+    )
+  }
+  else if (clickedRadioId == 'css') {
+    setCodingSnippet(`coding-snippet-container {
   width: 500px;
   height: 500px;
   background-color: var(--code-snippet-background);
@@ -133,10 +133,10 @@ function manageSnippet() {
   border-top-right-radius: 20px;
 }`
 
-        )
-    }
-    else if (clickedRadioId == 'script') {
-        setCodingSnippet(`'use strict';
+    )
+  }
+  else if (clickedRadioId == 'script') {
+    setCodingSnippet(`'use strict';
 
 const insertSection = document.querySelector('.about-col-2');
 const codingSnippetRadio = Array.from(document.querySelectorAll('input[name="select-tab"]'))
@@ -151,73 +151,73 @@ function manageSnippet() {
     const closestDiv = clickedRadio.closest('.coding-snippet-container-row--1-col');
     const clickedRadioId = clickedRadio.id;
 `
-        )
-    }
+    )
+  }
 
 
 
-    closestDiv.classList.add('bright');
+  closestDiv.classList.add('bright');
 
 }
 manageSnippet()
 codingSnippetRadioContainer.addEventListener('click', (e) => {
-    manageSnippet()
+  manageSnippet()
 })
 
 class typeWriter {
   constructor(typeWords, el, speed, waitPeriod = 1) {
     this.speed = speed
-      const wordsUn = typeWords.split(',')
-      const inTheMiddle = typeWords.split(':')
-      let words = []
-      let waitStr = ''
-      for (let i = 0; i < waitPeriod; i++) {
-          waitStr += ' '
+    const wordsUn = typeWords.split(',')
+    const inTheMiddle = typeWords.split(':')
+    let words = []
+    let waitStr = ''
+    for (let i = 0; i < waitPeriod; i++) {
+      waitStr += ' '
+    }
+
+    wordsUn.forEach((el => {
+      words.push(el.trim()[0].toUpperCase() + el.trim().slice(1, el.length) + waitStr)
+    }))
+
+
+    let i = 0
+    let k = 0
+    this.speed = speed
+
+    el.textContent = '  '
+    let reversing = false
+
+    const typingAnimation = setInterval(() => {
+      if (!reversing) {
+        el.textContent += words[k][i]
+        if (i === words[k].length - 1) {
+          reversing = true
+          return
+        }
+        i++
       }
+    }, this.speed)
 
-      wordsUn.forEach((el => {
-          words.push(el.trim()[0].toUpperCase() + el.trim().slice(1, el.length) + waitStr)
-      }))
-
-
-      let i = 0
-      let k = 0
-      this.speed = speed
-
-      el.textContent = '  '
-      let reversing = false
-
-      const typingAnimation = setInterval(() => {
-          if (!reversing) {
-              el.textContent += words[k][i]
-              if (i === words[k].length - 1) {
-                  reversing = true
-                  return
-              }
-              i++
+    const clearAnimation = setInterval(() => {
+      if (reversing) {
+        el.textContent = words[k].slice(0, i)
+        if (i === 0) {
+          reversing = false
+          if (k === words.length - 1) {
+            k = 0
+            return
           }
-      }, this.speed)
-
-      const clearAnimation = setInterval(() => {
-          if (reversing) {
-              el.textContent = words[k].slice(0, i)
-              if (i === 0) {
-                  reversing = false
-                  if (k === words.length - 1) {
-                      k = 0
-                      return
-                  }
-                  k++
-                  return
-              }
-              i--;
-          }
-      }, this.speed);
+          k++
+          return
+        }
+        i--;
+      }
+    }, this.speed);
   }
 
   speedUp() {
-      this.speed -= 200
-      console.log(this.speed);
+    this.speed -= 200
+    console.log(this.speed);
   }
 
 }
@@ -225,16 +225,16 @@ const hero_title = document.querySelector('.hero-title')
 const header = document.querySelector('header')
 new
   typeWriter
-  (':Hello I am Nohim!,:Software Engineer,:3D modeller,:Westminster Uni', hero_title, 100, 10)
+  ('Hello I am Nohim!,Software Engineer,3D modeller,Westminster Uni, PCB designer, Robotics enthusiast', hero_title, 100, 10)
 
 header.addEventListener("mousemove", (event) => {
-    div.classList.remove('hidden')
-    div.style.left = `${event.clientX}px`;
-    div.style.top = `${event.clientY}px`;
-    div.style.transform = "translate(-50%, -50%)"; // Center around cursor
+  div.classList.remove('hidden')
+  div.style.left = `${event.clientX}px`;
+  div.style.top = `${event.clientY}px`;
+  div.style.transform = "translate(-50%, -50%)"; // Center around cursor
 
 });
-  
+
 // const stext = Array.from(document.querySelectorAll('.main-sections-section--2-col'));
 // const ulList = document.createElement('ul')
 // let modifiedText = []
