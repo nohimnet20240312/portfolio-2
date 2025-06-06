@@ -130,11 +130,11 @@ nav ul li a {
 }
 .scroll-text{
     transform: translateY(-20px);
-    transition: all 1s linear;
+    /* transition: all 1s linear; */
     /* border: 1px solid var(--rich-black); */
     
 }
-@keyframes scroll{
+/* @keyframes scroll{
     from{
         transform: translateY(0px);
     }
@@ -144,4 +144,4 @@ nav ul li a {
     to{
       transform: translateY(0px);
     }
-}
+} */
