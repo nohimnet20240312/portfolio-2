@@ -119,7 +119,7 @@ nav ul li a {
     text-align: center;
     font-size: 28px;
     padding-bottom: 22px;
-    animation: scroll 2s ease-in-out infinite;
+    /* animation: scroll 2s ease-in-out infinite; */
     display: flex;
     justify-content: space-evenly;
 }
