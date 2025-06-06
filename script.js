@@ -30,13 +30,13 @@ const div = document.querySelector(".animated-pointer");
 
 const nav = document.querySelector('nav.navigation')
 document.addEventListener('scroll', () => {
-  // if (window.scrollY > 200) {
-  //   nav.classList.add('stick')
-  //   div.classList.add('hidden')
-  // }
-  // else {
-  //   nav.classList.remove('stick')
-  // }
+  if (window.scrollY > 200) {
+    nav.classList.add('stick')
+    div.classList.add('hidden')
+  }
+  else {
+    nav.classList.remove('stick')
+  }
 })
 
 codingSnippetRadio.forEach(el => {
