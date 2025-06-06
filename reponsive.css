@@ -72,6 +72,9 @@
     font-size: 16px;
     white-space: nowrap;
   }
+  .main-sections{
+    display: block !important;
+  }
   @keyframes scrl{
     from{
       transform: translateX(100vw);
