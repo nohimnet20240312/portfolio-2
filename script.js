@@ -224,13 +224,13 @@ class typeWriter {
 let clock = () => new Date().getHours()
 let minutes = () => new Date().getMinutes()
 let sec = () => new Date().getSeconds()
-setInterval(() => {
-  clock = () => new Date().getHours()
-  minutes = () => new Date().getMinutes()
-  sec = () => new Date().getSeconds()
+// setInterval(() => {
+//   clock = () => new Date().getHours()
+//   minutes = () => new Date().getMinutes()
+//   sec = () => new Date().getSeconds()
 
-}, 1000);
-console.log(clock());
+// }, 1000);
+// console.log(clock());
 const hero_title = document.querySelector('.hero-title')
 const header = document.querySelector('header')
 new
