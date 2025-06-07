@@ -221,11 +221,21 @@ class typeWriter {
   }
 
 }
+let clock = () => new Date().getHours()
+let minutes = () => new Date().getMinutes()
+let sec = () => new Date().getSeconds()
+setInterval(() => {
+  clock = () => new Date().getHours()
+  minutes = () => new Date().getMinutes()
+  sec = () => new Date().getSeconds()
+
+}, 1000);
+console.log(clock());
 const hero_title = document.querySelector('.hero-title')
 const header = document.querySelector('header')
 new
   typeWriter
-  ('Hello I am Nohim!,Software Engineer,3D modeller,Westminster Uni, PCB designer, Robotics enthusiast', hero_title, 100, 10)
+  (`Hello I am Nohim!,Software Engineer,3D modeller,Westminster Uni, PCB designer, Robotics enthusiast`, hero_title, 80, 10)
 
 header.addEventListener("mousemove", (event) => {
   div.classList.remove('hidden')

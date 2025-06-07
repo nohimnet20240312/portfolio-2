@@ -56,7 +56,7 @@ input[name="select-tab"] {
   white-space: pre-wrap;
   overflow: scroll;
   line-height: 1.4;
-  font-family: "consolas";
+  font-family: "Fira Code";
   font-size: 13px;
   transition: visibility 0.2s ease;
   font-weight: 100;
