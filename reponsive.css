@@ -3,8 +3,15 @@
     height: 100vh !important;
     /* background-color: aquamarine; */
   }
+  .animated-pointer{
+    display: none !important;
+  }
   .hero {
     grid-template-columns: 1fr;
+    cursor: pointer;
+  }
+  .hero>*{
+    cursor: default !important;
   }
   header > nav {
     padding: 0 !important;
